@@ -23,7 +23,7 @@ if (page.archive){
         </ul>
       <% } %>
       <% last = year; %>
-            <h2><a href="<%- url_for(config.archive_dir + '/' + year + '/') %>" class="archive-year"><%= year %></a></h2>
+            <h2><%= year %></h2>
             <ul id="post-list">
         <% } %>
         <%- partial('_partial/title', {item: item, index: true}) %>
