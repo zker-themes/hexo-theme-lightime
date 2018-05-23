@@ -1,0 +1,41 @@
+<%- partial('head') %>
+<nav class="main-nav">
+    <a href="/">← <%= __('home') %></a>
+    <%- partial('nav') %>
+</nav>
+<%
+var last;
+var title = '';
+if (page.category) title = page.category;
+if (page.tag) title = page.tag;
+if (page.archive){
+  if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+}
+%>
+<section id="wrapper">
+    <%- partial('profile') %>
+	<h2 style="font-size:2em;color:#5694f1" class="archive-title<% if (page.tag){ %>-tag<% } else if (page.category){ %>-category<% } else if (page.archive){ %>-archive<% } %>"><% if (page.tag){ %><%= __('tag') %><% } else if (page.category){ %><%= __('category') %><% } else if (page.archive) { %><%= __('archive_a') %><% } %>:<%= title %></h2>
+    <% if (page.archive){ %>
+    <% site.posts.sort('date', 'desc').each(function(item){ %>
+        <% var year = item.date.year(); %>
+        <% if (last != year){ %>
+      <% if (last != null){ %>
+        </ul>
+      <% } %>
+      <% last = year; %>
+            <h2><a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a></h2>
+            <ul id="post-list">
+        <% } %>
+        <%- partial('_partial/title', {item: item, index: true}) %>
+    <% }); %>
+    </ul>
+    <% } else { %>
+        <ul id="post-list">
+        <% page.posts.each(function(item){ %>
+            <%- partial('_partial/title', {item: item, index: true}) %>
+        <% }); %>
+        </ul>
+    <%- partial('_partial/pagination') %>
+    <% } %>
+<%- partial('footer') %>
+</section>

@@ -1,0 +1,4 @@
+<% for (var i in theme.menu){ %>
+    <a href="<%- config.root %><%- theme.menu[i] %>"><%= i %></a>
+<% } %>
+<a class="cta" href="/atom.xml"><%= __('rss') %></a>
