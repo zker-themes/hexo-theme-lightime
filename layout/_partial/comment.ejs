@@ -1,19 +1,19 @@
 <% if (!index && page.comments && theme.gitment){ %>
-<section id="comment">
-  <div id="gitment"></div>
-  <script>
-  var gitment = new Gitment({
-  <% if(item.title){ %>
-    id: "<%= item.title %>",
-  <% } %>
-    owner: "<%= (theme.gitment.username) %>",
-    repo: "<%= (theme.gitment.repo) %>",
-    oauth: {
-      client_id: "<%= (theme.gitment.id) %>",
-      client_secret: "<%= (theme.gitment.secret) %>",
-    },
-  })
-  gitment.render('gitment')
-  </script>
-</section>
+  <section id="comment">
+    <div id="gitment"></div>
+    <script>
+      var gitment = new Gitment({
+      <% if(item.title){ %>
+        id: "<%= item.title %>",
+      <% } %>
+        owner: "<%= (theme.gitment.username) %>",
+        repo: "<%= (theme.gitment.repo) %>",
+        oauth: {
+          client_id: "<%= (theme.gitment.id) %>",
+          client_secret: "<%= (theme.gitment.secret) %>",
+        },
+      })
+      gitment.render('gitment')
+    </script>
+  </section>
 <% } %>

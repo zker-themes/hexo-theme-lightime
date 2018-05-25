@@ -630,6 +630,14 @@ h2.month {
 		padding: 20px 20px 20px 20px
 	}
 
+	nav.main-nav{
+		text-align: center
+	}
+
+	nav.main-nav a.cta{
+		display: none
+	}
+
 	.post {
 		margin: 40px 0
 	}
