@@ -3,10 +3,12 @@ menu: #TITLE: link
   Archives: archives/
 
 profile_link: about/
-avatar: /images/avatar.png
+avatar: /images/profile.png
 
 gitment:
- username: 
+ username:
  repo: 
  id: 
  secret: 
+
+disqus_shortname: 

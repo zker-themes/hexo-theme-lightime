@@ -16,10 +16,10 @@ if (is_archive()){
 %>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 <title><% if (title){ %><%= title %> - <% } %><%= config.title %></title>
-<%- favicon_tag('images/avatar.png') %>
-<%- css('css/style.css','css/highlight.css') %>
+<%- favicon_tag('favicon.png') %>
+<%- css('css/style.css') %>
 <% if (theme.gitment){ %>
   <%- js('js/gitment.browser.js') %>
   <%- css('css/default.css') %>
