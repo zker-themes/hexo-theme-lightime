@@ -1,4 +1,4 @@
-![DEMO](https://wx2.sinaimg.cn/large/005zWjpngy1frkckolc84j31z4140wim)
+![DEMO](https://wx2.sinaimg.cn/large/005zWjpngy1frnimy8mbmj30pp0g340k)
 
 原hugo主题：https://github.com/digitalcraftsman/hugo-cactus-theme
 
