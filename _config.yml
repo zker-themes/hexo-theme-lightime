@@ -6,6 +6,10 @@ menu: #TITLE: link
 profile_link: about/
 avatar: /images/profile.png
 
+instantclick: false
+
+service_worker: true
+
 gitment:
  username: 
  repo: 
