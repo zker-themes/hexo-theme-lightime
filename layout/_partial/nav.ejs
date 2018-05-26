@@ -1,4 +1,9 @@
-<% for (var i in theme.menu){ %>
-    <a href="<%- config.root %><%- theme.menu[i] %>"><%= i %></a>
-<% } %>
-<a class="cta" href="/atom.xml" data-no-instant><%= __('rss') %></a>
+<nav class="main-nav">
+	<% if (!is_home()){ %>
+	    <a href="/">← <%= __('home') %></a>
+	<% } %>
+	<% for (var i in theme.menu){ %>
+	    <a href="<%- config.root %><%- theme.menu[i] %>"><%= i %></a>
+	<% } %>
+	<a class="cta" href="/atom.xml" data-no-instant><%= __('rss') %></a>
+</nav>

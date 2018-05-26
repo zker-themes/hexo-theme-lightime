@@ -1,12 +1,13 @@
 menu: #TITLE: link
   About: about/
   Archives: archives/
+  Links: links/
 
 profile_link: about/
 avatar: /images/profile.png
 
 gitment:
- username:
+ username: 
  repo: 
  id: 
  secret: 

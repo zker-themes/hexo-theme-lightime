@@ -753,20 +753,6 @@ code {
 	color: #5694f1
 }
 
-links a {
-	display: inline-block;
-	width: 25%;
-	text-align: center;
-	padding: 0 5px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap
-}
-
-links br {
-	display: none
-}
-
 /*
   Highlight
   IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
@@ -788,10 +774,10 @@ links br {
 
 .keyword,
 .tag,
-.tex .command,
+.command,
 .request,
 .status,
-.clojure .attribute {
+.attribute {
   color: #ebde68;
 }
 
@@ -807,9 +793,9 @@ links br {
 .cdata,
 .filter .argument,
 .attr_selector,
-.apache .cbracket,
+.cbracket,
 .date,
-.coffeescript .attribute {
+.attribute {
   color: #c1ef65;
 }
 
@@ -822,20 +808,20 @@ links br {
 }
 
 .title,
-.sub .identifier,
+.identifier,
 .pi,
 .decorator,
-.tex .special,
+.special,
 .type,
 .constant,
-.smalltalk .class,
+.class,
 .doctag,
-.nginx .built_in {
+.built_in {
   color: #c1ef65;
 }
 
 .symbol,
-.ruby .symbol .string,
+.symbol .string,
 .number,
 .variable,
 .vbscript,

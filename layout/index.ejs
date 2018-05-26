@@ -1,15 +1,6 @@
-<%- partial('_partial/head') %>
-<nav class="main-nav">
-    <%- partial('_partial/nav') %>
-</nav>
-
-<section id="wrapper">
-    <%- partial('_partial/profile') %>
-    <ul id="post-list">
-    	<% page.posts.each(function(item){ %>
-    	    <%- partial('_partial/title', {item: item, index: true}) %>
-    	<% }); %>
-    </ul>
-    <%- partial('_partial/pagination') %>
-	<%- partial('_partial/footer') %>
-</section>
+<%- partial('_partial/profile') %>
+<ul id="post-list">
+    <% page.posts.each(function(item){ %>
+        <%- partial('_partial/title', {item: item, index: true}) %>
+    <% }); %>
+</ul>

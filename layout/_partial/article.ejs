@@ -1,40 +1,31 @@
-<%- partial('head') %>
-<nav class="main-nav">
-    <a href="/">← <%= __('home') %></a>
-    <%- partial('nav') %>
-</nav>
-
-<section id="wrapper">
-    <article class="post">
-        <header>
-            <% if (item.title){ %>
-                <h1><%= item.title %></h1>
-            <% } %>
-            <h2 class="headline"><%= item.date.format(config.date_format) %>
-            <% if (item.categories && item.categories.length){ %>
-                <%
-                var cats = [];
-                item.categories.forEach(function(cat){
-                    cats.push('<a href="' + config.root + cat.path + '">' + cat.name + '</a>');
-                });
-                %>
-                <%- cats.join(', ') %>
-            <% } %>
-            </h2>
-        </header>
-    </article>
-    <section id="post-body"><%- item.content %></section>
-        <% if (item.tags && item.tags.length){ %>
+<article class="post">
+    <header>
+        <% if (item.title){ %>
+            <h1><%= item.title %></h1>
+        <% } %>
+        <h2 class="headline"><%= item.date.format(config.date_format) %>
+        <% if (item.categories && item.categories.length){ %>
             <%
-            var tags = [];
-            item.tags.forEach(function(tag){
-                tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+            var cats = [];
+            item.categories.forEach(function(cat){
+                cats.push('<a href="' + config.root + cat.path + '">' + cat.name + '</a>');
             });
             %>
-            <h2 class="footline">
-                <%- tags.join(', ') %>
-            </h2>
+            <%- cats.join(', ') %>
         <% } %>
-    <%- partial('comment') %>
-    <%- partial('footer') %>
-</section>
+        </h2>
+    </header>
+</article>
+<section id="post-body"><%- item.content %></section>
+    <% if (item.tags && item.tags.length){ %>
+        <%
+        var tags = [];
+        item.tags.forEach(function(tag){
+            tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+        });
+        %>
+        <h2 class="footline">
+            <%- tags.join(', ') %>
+        </h2>
+    <% } %>
+<%- partial('comment') %>
