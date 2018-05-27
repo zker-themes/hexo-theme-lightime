@@ -28,6 +28,18 @@ table {
 	border-spacing: 0
 }
 
+button.btn {
+	background: #5badf0;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    display: block;
+    margin: 8px auto;
+    line-height: 1.35
+}
+
 *,:after,:before {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;

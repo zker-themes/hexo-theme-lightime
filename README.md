@@ -1,4 +1,4 @@
-![DEMO](https://wx2.sinaimg.cn/large/005zWjpngy1frkckolc84j31z4140wim)
+![DEMO](https://wx2.sinaimg.cn/large/005zWjpngy1frnimy8mbmj30pp0g340k )
 
 原hugo主题：https://github.com/digitalcraftsman/hugo-cactus-theme
 
@@ -17,11 +17,13 @@ git clone -b master https://github.com/caisiduo/hexo-theme-lightime themes/light
 ## 特色
 
 - 单栏，简洁。
-- 集成Gitment评论系统。使用InstantClick实现无刷新浏览，更快更流畅。
+- 集成Gitment和Disqus评论系统。使用InstantClick实现无刷新浏览，更快更流畅。
+- 评论使用点击加载方式，减少不必要脚本，同时兼容InstantClick。
+- 支持Service Worker，但和InstantClick冲突，按需选择。
 - 代码高亮。
 - 支持归档页，分类、标签页。
 - i18n国际化。
-- **源码很乱**
+- ~~**源码很乱**~~
 
 
 

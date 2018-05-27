@@ -6,9 +6,9 @@ menu: #TITLE: link
 profile_link: about/
 avatar: /images/profile.png
 
-instantclick: false
+instantclick: true
 
-service_worker: true
+service_worker: false
 
 gitment:
  username: 

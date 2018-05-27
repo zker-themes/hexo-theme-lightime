@@ -12,6 +12,7 @@ const offlineResources = [
 const ignoreFetch = [
   /https?:\/\/cdnjs.loli.net\//,
   /https?:\/\/fonts.loli.net\//,
+  /https?:\/\/wx2.sinaimg.cn\//,
 ];
 
 
