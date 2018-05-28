@@ -1,3 +1,29 @@
+::selection {
+	background: #b0e2ff;
+	color: #fff
+}
+
+@media only screen and (min-width:767px) {
+	.gist-highlight::-webkit-scrollbar-track-piece,.highlight::-webkit-scrollbar-track-piece,html::-webkit-scrollbar-track-piece,pre::-webkit-scrollbar-track-piece {
+		background: #eee
+	}
+
+	.gist-highlight::-webkit-scrollbar,.highlight::-webkit-scrollbar,html::-webkit-scrollbar,pre::-webkit-scrollbar {
+		width: 6px;
+		height: 6px
+	}
+
+	.gist-highlight::-webkit-scrollbar-thumb,.highlight::-webkit-scrollbar-thumb,html::-webkit-scrollbar-thumb,pre::-webkit-scrollbar-thumb {
+		height: 40px;
+		border-radius: 4px;
+		background-color: #5694f1
+	}
+
+	.gist-highlight::-webkit-scrollbar-thumb:hover,.highlight::-webkit-scrollbar-thumb:hover,html::-webkit-scrollbar-thumb:hover,pre::-webkit-scrollbar-thumb:hover {
+		background-color: #5badf0
+	}
+}
+
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
 	border: 0;
 	font-size: 100%;
@@ -30,14 +56,14 @@ table {
 
 button.btn {
 	background: #5badf0;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 13px;
-    display: block;
-    margin: 8px auto;
-    line-height: 1.35
+	color: #fff;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 5px;
+	font-size: 13px;
+	display: block;
+	margin: 8px auto;
+	line-height: 1.35
 }
 
 *,:after,:before {
@@ -642,11 +668,11 @@ h2.month {
 		padding: 20px 20px 20px 20px
 	}
 
-	nav.main-nav{
+	nav.main-nav {
 		text-align: center
 	}
 
-	nav.main-nav a.cta{
+	nav.main-nav a.cta {
 		display: none
 	}
 
@@ -721,10 +747,6 @@ code {
 	font-weight: 600
 }
 
-.gutter {
-	display: none
-}
-
 .archive {
 	margin: 0 0 50px 0;
 	font-size: 16px
@@ -765,110 +787,192 @@ code {
 	color: #5694f1
 }
 
-/*
-  Highlight
-  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
-*/
-
-.pre {
-  display: block;
-  overflow-x: auto;
-  /*padding: 0.5em;*/
-  background: #272b2d;
-  color: #d0d0d0;
-  -webkit-text-size-adjust: none;
+.code pre {
+	overflow-x: auto;
+	color: #d0d0d0;
+	-webkit-text-size-adjust: none
 }
 
-.shebang,
-.comment {
-  color: #777279;
+.comment,.shebang {
+	color: #777279
 }
 
-.keyword,
-.tag,
-.command,
-.request,
-.status,
-.attribute {
-  color: #ebde68;
+.attribute,.command,.keyword,.request,.status,.tag {
+	color: #ebde68
 }
 
-.sub .keyword,
-.method,
-.list .title,
-.nginx .title {
-  color: #ffffb6;
+.method,.title {
+	color: #ffffb6
 }
 
-.string,
-.tag .value,
-.cdata,
-.filter .argument,
-.attr_selector,
-.cbracket,
-.date,
-.attribute {
-  color: #c1ef65;
+.argument,.attr_selector,.attribute,.cbracket,.cdata,.date,.tag .value {
+	color: #c1ef65
 }
 
 .subst {
-  color: #daefa3;
+	color: #daefa3
 }
 
 .regexp {
-  color: #e9c062;
+	color: #e9c062
 }
 
-.title,
-.identifier,
-.pi,
-.decorator,
-.special,
-.type,
-.constant,
-.class,
-.doctag,
-.built_in {
-  color: #c1ef65;
+.built_in,.class,.constant,.decorator,.doctag,.identifier,.pi,.special,.title,.type {
+	color: #c1ef65
 }
 
-.symbol,
-.symbol .string,
-.number,
-.variable,
-.vbscript,
-.literal,
-.name {
-  color: #77bcd7;
+.literal,.name,.number,.string,.symbol,.variable,.vbscript {
+	color: #77bcd7
 }
 
-.css .tag {
-  color: #96cbfe;
+.tag {
+	color: #96cbfe
 }
 
-.css .rule .property,
-.css .id {
-  color: #ffffb6;
+.id,.property {
+	color: #ffffb6
 }
 
-.css .class {
-  color: #fff;
+.class {
+	color: #fff
 }
 
 .hexcolor {
-  color: #c6c5fe;
+	color: #c6c5fe
 }
 
 .number {
-  color:#77bcd7;
+	color: #77bcd7
 }
 
-.coffeescript .javascript,
-.javascript .xml,
-.tex .formula,
-.xml .javascript,
-.xml .vbscript,
-.xml .css,
-.xml .cdata {
-  opacity: 0.7;
+.cdata,.css,.formula,.javascript,.vbscript,.xml {
+	opacity: .7
+}
+
+#post-body .highlight {
+	background: #272b2d;
+	margin: 0;
+	padding: 20px;
+	border-style: solid;
+	border-color: #d0d0d0;
+	border-width: 1px 0;
+	overflow: auto;
+	color: #ccc;
+	border-radius: 3px
+}
+
+#post-body .gist .gist-file .gist-data .line-numbers,#post-body .highlight .gutter pre {
+	color: #666
+}
+
+#post-body code,#post-body pre {
+	font-size: .85em
+}
+
+#post-body pre code {
+	background: 0 0;
+	text-shadow: none;
+	padding: 0
+}
+
+#post-body .highlight code {
+	background: #eee;
+	text-shadow: 0 1px #fff;
+	padding: 0 .3em
+}
+
+#post-body .highlight pre {
+	border: none;
+	margin: 0;
+	padding: 0;
+	white-space: pre;
+	font-family: Menlo,Monaco,Courier;
+	font-family: Menlo,Monaco,Courier;
+	font-size: 14px;
+	padding: 4px;
+	font-weight: 600;
+	border-radius: 0
+}
+
+#post-body .highlight table {
+	margin: 0;
+	width: auto;
+	border: 0 none
+}
+
+#post-body .highlight tr {
+	border: 0 none
+}
+
+#post-body .highlight td {
+	border: 0 none;
+	padding: 0
+}
+
+#post-body .highlight td.gutter {
+	padding: 0
+}
+
+#post-body .highlight figcaption {
+	font-size: .75em;
+	color: #999;
+	line-height: 1em;
+	margin-bottom: 1em
+}
+
+#post-body .highlight figcaption a {
+	float: right
+}
+
+#post-body .gist {
+	margin: 0 -20px;
+	border-style: solid;
+	border-color: #dedede;
+	border-width: 1px 0;
+	background: #2d2d2d;
+	padding: 15px 20px 15px 0
+}
+
+#post-body .gist .gist-file {
+	border: none;
+	margin: 0
+}
+
+#post-body .gist .gist-file .gist-data {
+	background: 0 0;
+	border: none
+}
+
+#post-body .gist .gist-file .gist-data .line-numbers {
+	background: 0 0;
+	border: none;
+	padding: 0 20px 0 0
+}
+
+#post-body .gist .gist-file .gist-data .line-data {
+	padding: 0!important
+}
+
+#post-body .gist .gist-file .highlight {
+	margin: 0;
+	padding: 0;
+	border: none
+}
+
+#post-body .gist .gist-file .gist-meta {
+	background: #2d2d2d;
+	color: #999;
+	text-shadow: 0 0;
+	padding: 0;
+	margin-top: 1em;
+	margin-left: 20px
+}
+
+#post-body .gist .gist-file .gist-meta a {
+	color: #7cc576;
+	font-weight: 400
+}
+
+#post-body .gist .gist-file .gist-meta a:hover {
+	text-decoration: underline
 }
