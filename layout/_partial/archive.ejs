@@ -14,13 +14,13 @@ if (page.archive){
 	<div class="tagclound">
 		<h2><%= __('tagclound') %></h2>
 		<% site.tags.map(function(tag){  %>
-    		<a href="<%- config.root %>tags/<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %><span>(<%= tag.length %>)</span></a>
+    		<a href="<%- config.root %>tags/<%= tag.name %>/" title="<%= tag.name %>"><%= tag.name %><span>(<%= tag.length %>)</span></a>
     	<% }) %>
     </div>
 	<div class="category">
 		<h2><%= __('category') %></h2>
 		<% site.categories.map(function(category){  %>
-    		<a href="<%- config.root %>categories/<%= category.name %>" title="<%= category.name %>"><%= category.name %><span>(<%= category.length %>)</span></a>
+    		<a href="<%- config.root %>categories/<%= category.name %>/" title="<%= category.name %>"><%= category.name %><span>(<%= category.length %>)</span></a>
     	<% }) %>
     </div>
     <% site.posts.sort('date', 'desc').each(function(item){ %>
