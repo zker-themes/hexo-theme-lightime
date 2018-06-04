@@ -11,6 +11,18 @@ if (page.archive){
 <%- partial('profile') %>
 <h2 style="font-size:2em;color:#5694f1" class="archive-title<% if (page.tag){ %>-tag<% } else if (page.category){ %>-category<% } else if (page.archive){ %>-archive<% } %>"><% if (page.tag){ %><%= __('tag') %><% } else if (page.category){ %><%= __('category') %><% } else if (page.archive) { %><%= __('archive_a') %><% } %>:<%= title %></h2>
 <% if (page.archive){ %>
+	<div class="tagclound">
+		<h2><%= __('tagclound') %></h2>
+		<% site.tags.map(function(tag){  %>
+    		<a href="<%- config.root %>tags/<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %><span>(<%= tag.length %>)</span></a>
+    	<% }) %>
+    </div>
+	<div class="category">
+		<h2><%= __('category') %></h2>
+		<% site.categories.map(function(category){  %>
+    		<a href="<%- config.root %>categories/<%= category.name %>" title="<%= category.name %>"><%= category.name %><span>(<%= category.length %>)</span></a>
+    	<% }) %>
+    </div>
     <% site.posts.sort('date', 'desc').each(function(item){ %>
         <% var year = item.date.year(); %>
         <% if (last != year){ %>

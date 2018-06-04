@@ -82,7 +82,7 @@ button.btn {
 	display: none
 }
 
-.post h1,.post-body ul,h3,h4,h5,ol,p,pre {
+.line .post-body ul,.post h1,h3,h4,h5,ol,p,pre {
 	margin-bottom: 20px
 }
 
@@ -613,6 +613,33 @@ h2.month {
 	border-bottom: 1px solid #eee
 }
 
+.tagclound a {
+	margin-left: 10px;
+	color: #999;
+	font: italic 400 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+.category a {
+	margin-left: 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font: 400 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+.category span,.tagclound span {
+	font-style: normal;
+	margin-left: 5px
+}
+
+.category h2,.tagclound h2 {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 20px
+}
+
+.tagclound a:before {
+	content: '#'
+}
+
 #archive-list li:last-child {
 	margin-bottom: 0
 }
@@ -793,19 +820,19 @@ code {
 	-webkit-text-size-adjust: none
 }
 
-.comment,.shebang {
+.comment,.line .shebang {
 	color: #777279
 }
 
-.attribute,.command,.keyword,.request,.status,.tag {
+.attribute,.line .command,.line .keyword,.line .request,.line .status,.line .tag {
 	color: #ebde68
 }
 
-.method,.title {
+.line .title,.method {
 	color: #ffffb6
 }
 
-.argument,.attr_selector,.attribute,.cbracket,.cdata,.date,.tag .value {
+.argument,.line .attr_selector,.line .attribute,.line .cbracket,.line .cdata,.line .date,.line .tag .value {
 	color: #c1ef65
 }
 
@@ -817,11 +844,11 @@ code {
 	color: #e9c062
 }
 
-.built_in,.class,.constant,.decorator,.doctag,.identifier,.pi,.special,.title,.type {
+.line .built_in,.line .line .class,.line .line .constant,.line .line .decorator,.line .line .doctag,.line .line .identifier,.line .line .pi,.line .line .special,.line .line .title,.line .line .type {
 	color: #c1ef65
 }
 
-.literal,.name,.number,.string,.symbol,.variable,.vbscript {
+.line .line .name,.line .literal,.line .number,.line .string,.line .symbol,.line .variable,.line .vbscript {
 	color: #77bcd7
 }
 
@@ -829,7 +856,7 @@ code {
 	color: #96cbfe
 }
 
-.id,.property {
+.id,.line .property {
 	color: #ffffb6
 }
 
@@ -845,7 +872,7 @@ code {
 	color: #77bcd7
 }
 
-.cdata,.css,.formula,.javascript,.vbscript,.xml {
+.cdata,.line .css,.line .formula,.line .javascript,.line .vbscript,.line .xml {
 	opacity: .7
 }
 
