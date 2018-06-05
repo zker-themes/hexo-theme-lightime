@@ -613,30 +613,43 @@ h2.month {
 	border-bottom: 1px solid #eee
 }
 
-.tagclound a {
-	margin-left: 10px;
+h2#archive,h2#category,h2#tag {
+	font-size: 2.5em;
+	color: #5694f1;
+	margin: 0
+}
+h2#archive span,h2#category span,h2#tag span{
+	float: right
+}
+
+h2.archive-title {
+	margin: 40px 0 0 0
+}
+
+.tagcloud a {
+	margin-right: 10px;
 	color: #999;
 	font: italic 400 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
 .category a {
-	margin-left: 10px;
+	margin-right: : 10px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font: 400 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif
 }
 
-.category span,.tagclound span {
+.category span,.tagcloud span {
 	font-style: normal;
 	margin-left: 5px
 }
 
-.category h2,.tagclound h2 {
+.category h2,.tagcloud h2 {
 	border-bottom: 1px solid #eee;
 	margin-bottom: 20px
 }
 
-.tagclound a:before {
+.tagcloud a:before {
 	content: '#'
 }
 
