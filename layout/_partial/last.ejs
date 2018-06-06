@@ -1,11 +1,14 @@
 <% if (theme.instantclick){ %>
-<script src="//cdnjs.loli.net/ajax/libs/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
-<script data-no-instant>InstantClick.init('mousedown');</script>
+	<script src="//cdnjs.loli.net/ajax/libs/instantclick/3.0.1/instantclick.min.js" data-no-instant></script>
+	<script data-no-instant>InstantClick.init('mousedown');</script>
 <% } %>
 <% if (theme.service_worker){ %>
-<script>
-if ('serviceWorker' in navigator) {
- navigator.serviceWorker.register('/sw.js');
-}
-</script>
+	<script>
+		if ('serviceWorker' in navigator) {
+		 navigator.serviceWorker.register('/sw.js');
+	}
+	</script>
+<% } %>
+<% if (theme.hitokoto){ %>
+	<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 <% } %>

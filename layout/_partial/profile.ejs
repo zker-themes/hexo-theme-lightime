@@ -5,7 +5,11 @@
         	    <img id="avatar" src="<%- theme.avatar %>">
         	</a>
         	<h1><%= config.title %></h1>
-        	<h2><%= config.subtitle %></h2>
+        	<% if (theme.hitokoto){ %>
+        		<h2 id="hitokoto">LOADING</h2>
+        	<% } else { %>
+        		<h2><%= config.subtitle %></h2>
+        	<% } %>
 		</header>
 	</section>
 </div>
