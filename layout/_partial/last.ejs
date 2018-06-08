@@ -5,10 +5,39 @@
 <% if (theme.service_worker){ %>
 	<script>
 		if ('serviceWorker' in navigator) {
-		 navigator.serviceWorker.register('/sw.js');
-	}
+			navigator.serviceWorker.register('/sw.js');
+		}
 	</script>
 <% } %>
-<% if (theme.hitokoto){ %>
-	<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+
+<% if (!is_post()&&!is_page()){ %>
+	<script>
+		// To make images retina, add a class "2x" to the img element
+		var isMobile = {
+			Android:function() {
+				return navigator.userAgent.match(/Android/i) ? true : false;
+			},
+			BlackBerry:function(){
+				return navigator.userAgent.match(/BlackBerry/i) ? true : false;
+			},
+			iOS:function(){
+				return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+			},
+			Windows:function(){
+				return navigator.userAgent.match(/IEMobile/i) ? true : false;
+			},
+			any:function(){
+			   return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Windows());
+			}
+		};
+		if (isMobile.any()) {
+			var suffix = document.getElementsByClassName('2x')[0].getAttribute('src');
+			suffix = suffix.replace('.png','@2x.png');
+			suffix = suffix.replace('.jpg','@2x.jpg');
+			document.getElementsByClassName('2x')[0].setAttribute('src',suffix);
+		};
+	</script>
+	<% if (theme.hitokoto){ %>
+		<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+	<% } %>
 <% } %>

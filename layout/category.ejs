@@ -1,1 +1,16 @@
-<%- partial('_partial/archive', {pagination: config.category}) %>
+<%- partial('_partial/profile') %>
+
+<% site.categories.map(function(category){  %>
+<div class="archive">
+            	<h3 id="<%- category.name %>" class="archive-title"><%- category.name %></h3>
+    <% category.posts.map(function(item){  %>
+    <ul>
+    	<div class="post-item">
+    		<div class="post-time"><%= item.date.format('MMM DD') %></div>
+    		<a href="<%- config.root %><%- item.path %>" class="post-link"><%= item.title || '(' + __('no_title') + ')'  %></a>
+		</div>
+        <!-- <p class="item-meta">{{ item.date | date:"%Y-%m-%d" }}</p> -->
+    <% }) %>
+    </ul>
+</div>
+<% }) %>

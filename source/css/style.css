@@ -102,11 +102,8 @@ img{max-width:100%;border-radius:3px}
 #post-nav span.next:hover{right:-3px}
 h1.archive{margin-bottom:0}
 h2.month{width:100%;font:700 13px/1 "Helvetica Neue",helvetica,Arial,sans-serif;text-transform:uppercase;margin-top:40px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #eee}
-h2#archive,h2#category,h2#tag{font-size:24px;color:#5694f1;margin:0}
-h2#archive span,h2#category span,h2#tag span{float:right}
-h2.archive-title{margin:40px 0 0 0}
-.tagcloud a{margin-right:10px;color:#999;font:italic 400 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif}
-.category a{margin-right:: 10px;text-transform:uppercase;letter-spacing:2px;font:400 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif}
+.ct-list{padding:10px 0}
+.tagcloud a,.category a{margin-right:10px;font:400 14px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif}
 .category span,.tagcloud span{font-style:normal;margin-left:5px}
 .category h2,.tagcloud h2{border-bottom:1px solid #eee;margin-bottom:20px}
 .tagcloud a:before{content:'#'}
@@ -139,13 +136,13 @@ a.symbol{color:#cdd4da;font-size:2rem;text-decoration:none;margin-right:.3rem}
 a.symbol:hover{color:#bcd4da}
 code{font-family:Menlo,Monaco,Courier;background-color:#eee;font-size:14px;padding:4px;font-weight:600}
 .archive{margin:0 0 50px 0;font-size:16px}
+.archive-title{margin:0;color:#666}
 .archive .post-item{padding:10px 0;overflow-x:hidden;white-space:nowrap}
 .archive .post-time{display:inline-block;width:60px;margin:0;color:#8a8a8a}
 @media screen and (max-width:768px){.archive .post-time{margin:5px 0;width:auto;font-size:13px;display:block}
 }
-.archive .post-link{color:#8a8a8a}
-.archive .post-item:hover{color:#5694f1;transition:.3s ease-out}
-.archive .post-item:hover .post-link{color:#5694f1}
+.category a,.tagcloud a,.archive .post-link{color:#8a8a8a}
+.category a:hover,.tagcloud a:hover,.archive .post-link:hover{color:#5694f1;transition:.3s ease-out}
 .code pre{overflow-x:auto;color:#d0d0d0;-webkit-text-size-adjust:none}
 .comment,.line .shebang{color:#777279}
 .attribute,.line .command,.line .keyword,.line .request,.line .status,.line .tag{color:#ebde68}

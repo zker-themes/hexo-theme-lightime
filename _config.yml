@@ -4,7 +4,7 @@ menu: #TITLE: link
   Links: links/
 
 profile_link: about/
-avatar: /images/profile.png
+avatar: /images/avatar.png #Please also prepare a HDer picture and add suffix@2x put in the same directory.
 
 instantclick: true
 
@@ -18,6 +18,6 @@ gitment:
 
 disqus_shortname: 
 
-twitter: caisiduo
+twitter: 
 
 hitokoto: false

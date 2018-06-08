@@ -9,38 +9,36 @@ if (page.archive){
 %>
 
 <%- partial('profile') %>
-<h2 id="<% if (page.tag){ %>tag<% } else if (page.category){ %>category<% } else if (page.archive){ %>archive<% } %>"><% if (page.tag){ %><%= __('tag') %><% } else if (page.category){ %><%= __('category') %><% } else if (page.archive) { %><%= __('archive_a') %><% } %><span><%= title %></span></h2>
-<% if (page.archive){ %>
     <% site.posts.sort('date', 'desc').each(function(item){ %>
         <% var year = item.date.year(); %>
         <% if (last != year){ %>
             <% if (last != null){ %>
                 </ul>
+    			</div>
             <% } %>
             <% last = year; %>
-            <h2 class="archive-title"><%= year %></h2>
-            <ul id="post-list">
+    		<div class="archive">
+            	<h3 class="archive-title"><%= year %></h3>
+            	<ul>
         <% } %>
-        <%- partial('_partial/title', {item: item, index: true}) %>
+        <%- partial('_partial/archive-post', {item: item, index: true}) %>
     <% }); %>
     </ul>
-	<div class="tagcloud">
-		<h2 class="archive-title"><%= __('tagcloud') %></h2>
+    </div>
+<div class="archive tagcloud">
+	<h3 class="archive-title"><%= __('tagcloud') %></h3>
+	<ul class="ct-list">
 		<% site.tags.map(function(tag){  %>
-    		<a href="<%- config.root %>tags/<%= tag.name %>/" title="<%= tag.name %>"><%= tag.name %><span>(<%= tag.length %>)</span></a>
+    		<a href="<%- config.root %>tags/<%= tag.name %>/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %><span>(<%= tag.length %>)</span></a>
     	<% }) %>
-    </div>
-	<div class="category">
-		<h2 class="archive-title"><%= __('category') %></h2>
-		<% site.categories.map(function(category){  %>
-    		<a href="<%- config.root %>categories/<%= category.name %>/" title="<%= category.name %>"><%= category.name %><span>(<%= category.length %>)</span></a>
-    	<% }) %>
-    </div>
-<% } else { %>
-    <ul id="post-list">
-        <% page.posts.each(function(item){ %>
-            <%- partial('_partial/title', {item: item, index: true}) %>
-        <% }); %>
     </ul>
-    <%- partial('_partial/pagination') %>
-<% } %>
+</div>
+<div class="archive category">
+	<h3 class="archive-title"><%= __('category') %></h3>
+	<ul class="ct-list">
+		<% site.categories.map(function(category){  %>
+    		<a href="<%- config.root %>categories/<%= category.name %>/#<%= category.name %>" title="<%= category.name %>"><%= category.name %><span>(<%= category.length %>)</span></a>
+    	<% }) %>
+    	</div>
+    </ul>
+</div>
