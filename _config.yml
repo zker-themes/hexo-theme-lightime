@@ -4,11 +4,7 @@ menu: #TITLE: link
   Links: links/
 
 profile_link: about/
-avatar: /images/avatar.png #Please also prepare a HDer picture and add suffix@2x put in the same directory.
-
-instantclick: true
-
-service_worker: false
+avatar: /images/avatar.png #Please also prepare a HDer picture and add suffix@2x put in the same directory. and My English is not very good.
 
 gitment:
  username: 
@@ -20,4 +16,15 @@ disqus_shortname:
 
 twitter: 
 
-hitokoto: false
+hitokoto: true
+instantclick: true
+service_worker: false
+
+js:
+  instantclick: //cdnjs.loli.net/ajax/libs/instantclick/3.0.1/instantclick.min.js
+  hitokoto: //v1.hitokoto.cn/?encode=js&select=%23hitokoto
+  service_worker: /sw.js
+  gitment: /js/gitment.browser.js
+
+css:
+  gitment: /css/default.css

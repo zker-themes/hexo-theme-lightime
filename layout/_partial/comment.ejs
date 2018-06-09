@@ -2,8 +2,8 @@
   <section id="comment">
     <button class="btn" id="loadcmts" onclick="cmts.load();"><%= __('load_comments') %></button>
     <div id="gitment"></div>
-    <%- js('js/gitment.browser.js') %>
-    <%- css('css/default.css') %>
+    <script src='<%- theme.js.gitment %>'></srcipt>
+    <link rel="stylesheet" href='<%- theme.css.gitment %>'>
     <script>
       var cmts={
         load:function cmts(){
