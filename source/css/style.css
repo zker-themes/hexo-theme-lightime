@@ -75,8 +75,8 @@ nav.main-nav a.cta{background:#5badf0;color:#fff;margin-left:12px}
 .post h2{margin-bottom:40px;font:300 24px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#111}
 .post h2.subtitle{font:italic 19px/1.3em Georgia,serif;color:#bbb}
 .post h2.headline{font:400 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;margin:-5px 0 40px 0;color:#b2b9be;font-size:13px;text-transform:uppercase;letter-spacing:2px;display:inline-block}
-.post h2.footline{font:italic 400 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;display:inline-block;font-size:13px;margin:40px 0 -5px 0}
-.post h2.footline a:before{content:"#"}
+h2.footline{font:italic 400 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;display:inline-block;font-size:13px;margin:40px 0 -5px 0}
+h2.footline a:before{content:"#"}
 
 #post-list h2{font:400 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;color:#aaa;max-width:400px;margin-top:2px}
 #badge{position:absolute;bottom:8px;right:8px;height:48px;width:48px}
@@ -121,13 +121,13 @@ nav.main-nav a.cta{background:#5badf0;color:#fff;margin-left:12px}
 h1.archive{margin-bottom:0}
 h2.month{width:100%;font:700 13px/1 "Helvetica Neue",helvetica,Arial,sans-serif;text-transform:uppercase;margin-top:40px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #eee}
 
-.category a,.tagcloud a,.archive .post-link{color:#8a8a8a}
-.category a:hover,.tagcloud a:hover,.archive .post-link:hover{color:#5694f1;transition:.3s ease-out}
+.ct-list a,.archive .post-link{color:#8a8a8a}
+.ct-list a:hover,.archive .post-link:hover{color:#5694f1;transition:.3s ease-out}
 .ct-list{padding:10px 0}
-.tagcloud a,.category a{margin-right:10px;font:400 14px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif}
-.category span,.tagcloud span{font-style:normal;margin-left:5px}
-.category h2,.tagcloud h2{border-bottom:1px solid #eee;margin-bottom:20px}
-.tagcloud a:before{content:'#'}
+.ct-list a{margin-right:10px;font:400 14px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif}
+.ct-list span{font-style:normal;margin-left:5px}
+#tagcloud a:before{content:'#'}
+#tag h3:before{content:'#'}
 
 #archive-list li:last-child{margin-bottom:0}
 #archive-list a{display:block;font:700 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;color:#333}
