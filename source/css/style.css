@@ -10,14 +10,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{di
 body{line-height:1}
 blockquote,q{quotes:none}
 blockquote:after,blockquote:before,q:after,q:before{content:none}
-table{border-collapse:collapse;border-spacing:0}
+table{border-collapse:collapse;border-spacing:0;table-layout:fixed}
 button.btn{background:#5badf0;color:#fff;border:none;padding:8px 12px;border-radius:5px;font-size:13px;display:block;margin:8px auto;line-height:1.35}
 *,:after,:before{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
-
 .clearfix:after{content:"";display:table;clear:both}
 .hidden{display:none}
 .line .post-body ul,.post h1,h3,h4,h5,ol,p,pre{margin-bottom:20px}
-
 body,html{height:100%}
 body{font:16px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#666;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 h1{font-size:30px;letter-spacing:-1px;color:#222;font-weight:700}
@@ -36,17 +34,18 @@ li{list-style-position:inside}
 blockquote{padding-left:15px;border-left:3px solid #eee}
 hr{display:block;border:none;height:1px;margin:40px auto;background:#eee}
 span.code{font-family:Menlo,Monaco,Courier;background-color:#eee;font-size:14px}
-pre{font-family:Menlo,Monaco,Courier;white-space:pre-wrap;padding:20px;background-color:#fdfdfd;overflow:auto;border-radius:3px;background:#272b2d;font-family:'Source Code Pro',Menlo,monospace;font-size:13px;line-height:1.5em;font-weight:500;color:#d0d4d7}
+pre{font-family:Menlo,Monaco,Courier;white-space:pre-wrap;padding:20px;background-color:#fff;overflow:auto;border-radius:3px;font-family:'Source Code Pro',Menlo,monospace;font-size:13px;line-height:1.5em;font-weight:500;color:#d0d4d7}
 table{width:100%;margin:40px 0;border-collapse:collapse;font-size:13px;line-height:1.5em}
 td,th{text-align:left;padding-right:20px;vertical-align:top}
-table td,td{border-spacing:none;border-style:solid;padding:10px 15px;border-width:1px 0 0 0}
+table td,td{border-spacing:none;border-style:solid;padding:10px 15px;border-width:1px 0 0 0;}
 tr>td{border-top:1px solid #eaeaea}
 tr:nth-child(odd)>td{background:#fcfcfc}
 th,thead th{text-align:left;padding:10px 15px;height:20px;font-size:13px;font-weight:700;color:#444;border-bottom:1px solid #dadadc;cursor:default;white-space:nowrap}
 img{max-width:100%;border-radius:3px}
 b,strong{font-weight:500;color:#1e2025}
 em,i{font-style:italic}
-code{font-family:Menlo,Monaco,Courier;background-color:#eee;font-size:14px;padding:4px;font-weight:600}
+code{font-family:Menlo,Monaco,Courier;background-color:#fff;font-size:14px;font-family:Menlo,Monaco,Courier,monospace;padding:4px;font-size:11px;border-radius:4px;overflow:scroll;box-shadow:inset 0 0 0 1px #E4EBF2;margin:0}
+audio,video{width:100%}
 
 .profile #wrapper{padding:100px 40px 0;max-width:800px;margin:0 auto}
 .profile #header{padding-bottom:40px;text-align:center;position:relative}
@@ -54,6 +53,7 @@ code{font-family:Menlo,Monaco,Courier;background-color:#eee;font-size:14px;paddi
 .profile h1{font-weight:400;letter-spacing:0;font-size:20px;color:#222}
 .profile h2{font-size:20px;font-weight:300;color:#aaa;margin-top:10px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-style:normal}
 .home #avatar{float:right;width:40px;height:40px;border-radius:50%}
+.description{float:right;font:italic 14px/1.4em Georgia,serif;color:#aaa}
 
 nav.main-nav{padding:20px 20px 0;background:#fff;background:rgba(255,255,255,.9);margin:0 auto;text-align:right;z-index:100}
 nav.main-nav a{top:8px;right:6px;padding:8px 12px;color:#5badf0;font-size:13px;line-height:1.35;border-radius:3px}
@@ -64,10 +64,24 @@ nav.main-nav a.cta{background:#5badf0;color:#fff;margin-left:12px}
 
 #post-list a:hover,#post-list li:hover .dates,#title,#title:hover,a{text-decoration:none;color:#5badf0;color:#5694f1}
 #post-list a,#post-nav a,a{-webkit-transition:all .15s ease;-moz-transition:all .15s ease;-ms-transition:all .15s ease;-o-transition:all .15s ease;transition:all .15s ease}
+#post-list h2{font:400 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;color:#aaa;max-width:400px;margin-top:2px}
+#post-list li:last-child{border-bottom:1px solid #eee}
+#post-list a{color:#333;display:block;font:700 19px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif}
+#post-list .dates{float:right;position:relative;top:1px;font:300 17px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;color:#bbb}
+#post-list-footer{border-top:1px solid #eee;margin-top:20px;padding-top:100px}
+#archive-list{margin-top:100px}
+#post-list{margin-bottom:0}
+#archive-list li,#post-list li{border-top:1px solid #eee;padding-top:20px;padding-bottom:20px;list-style-type:none;margin-bottom:0}
+#archive-link{display:inline-block;font-size:13px;font-weight:700;border-radius:4px;padding:3px 10px 6px;box-shadow:0 0 0 1px hsla(207,83%,80%,1)}
+#archive-link:hover{background:#5694f1;color:#fff;box-shadow:0 0 0 1px #5694f1}
+#archive-link span{position:relative;top:0;font-size:17px}
+#archive-list li:last-child{margin-bottom:0}
+#archive-list a{display:block;font:700 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;color:#333}
+#archive-list .dates{float:right;position:relative;top:1px;font:300 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;color:#bbb}
+#archive-list li a:hover,#archive-list li:hover .dates{color:#5694f1}
+#title{display:inline-block;line-height:100%;font-weight:500;font-size:19px;margin:0;padding-bottom:20px}
 
 #post-body,p{line-height:1.7}
-#title{display:inline-block;line-height:100%;font-weight:500;font-size:19px;margin:0;padding-bottom:20px}
-.description{float:right;font:italic 14px/1.4em Georgia,serif;color:#aaa}
 .home h1{font-size:30px;letter-spacing:-1px;color:#222;font-weight:700}
 .home h2{font:italic 19px/1.3em Georgia,serif;color:#bbb}
 .post header{text-align:center}
@@ -78,24 +92,13 @@ nav.main-nav a.cta{background:#5badf0;color:#fff;margin-left:12px}
 h2.footline{font:italic 400 13px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;display:inline-block;font-size:13px;margin:40px 0 -5px 0}
 h2.footline a:before{content:"#"}
 
-#post-list h2{font:400 17px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif;color:#aaa;max-width:400px;margin-top:2px}
 #badge{position:absolute;bottom:8px;right:8px;height:48px;width:48px}
-#archive-list{margin-top:100px}
-#post-list{margin-bottom:0}
-#archive-list li,#post-list li{border-top:1px solid #eee;padding-top:20px;padding-bottom:20px;list-style-type:none;margin-bottom:0}
-#post-list li:last-child{border-bottom:1px solid #eee}
-#post-list a{color:#333;display:block;font:700 19px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif}
-#post-list .dates{float:right;position:relative;top:1px;font:300 17px/1.8 "Helvetica Neue",helvetica,Arial,sans-serif;color:#bbb}
-#post-list-footer{border-top:1px solid #eee;margin-top:20px;padding-top:100px}
-#archive-link{display:inline-block;font-size:13px;font-weight:700;border-radius:4px;padding:3px 10px 6px;box-shadow:0 0 0 1px hsla(207,83%,80%,1)}
-#archive-link:hover{background:#5694f1;color:#fff;box-shadow:0 0 0 1px #5694f1}
-#archive-link span{position:relative;top:0;font-size:17px}
 #footer{padding:40px 0 0 0}
 .post{margin:80px 0 0 0}
 
 #post-meta{font-size:13px;font-weight:700;line-height:1.4;border-top:1px solid #eee;padding-top:40px;margin-bottom:40px;padding-bottom:40px;margin-top:40px;color:#444;border-bottom:1px solid #eee}
 #post-meta div span{color:#aaa;font-weight:500;display:block}
-#post-meta div span.dark{color:#1E2025}
+#post-meta div span.dark{color:#1e2025}
 #post-meta div{margin:0 25px 0 0;float:left}
 #sharing{float:right;margin:-2px}
 #sharing a.facebook{background:#4361b3}
@@ -103,6 +106,7 @@ h2.footline a:before{content:"#"}
 #sharing a{font-size:13px;font-weight:700;margin-top:4px;color:#fff;display:inline-block;vertical-align:middle;padding:6px 10px;border-radius:4px;margin-left:2px}
 #sharing a:hover{opacity:.8}
 #post-meta img.avatar{height:36px;width:36px;float:left;border-radius:50%;margin-top:3px;margin-right:20px;box-shadow:0 0 0 3px #fff,0 0 0 4px #eee}
+
 #post-list.archive.readmore h3{font:400 20px "Helvetica Neue",Helvetica,Arial,sans-serif;margin-bottom:30px}
 #post-list.archive.readmore a{font:400 16px/1.6 "Helvetica Neue",helvetica,Arial,sans-serif;color:#5694f1}
 #post-list.archive.readmore a:hover{opacity:.8}
@@ -121,18 +125,13 @@ h2.footline a:before{content:"#"}
 h1.archive{margin-bottom:0}
 h2.month{width:100%;font:700 13px/1 "Helvetica Neue",helvetica,Arial,sans-serif;text-transform:uppercase;margin-top:40px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #eee}
 
-.ct-list a,.archive .post-link{color:#8a8a8a}
-.ct-list a:hover,.archive .post-link:hover{color:#5694f1;transition:.3s ease-out}
+.archive .post-link,.ct-list a{color:#8a8a8a}
+.archive .post-link:hover,.ct-list a:hover{color:#5694f1;transition:.3s ease-out}
 .ct-list{padding:10px 0}
 .ct-list a{margin-right:10px;font:400 14px/1.5em "Helvetica Neue",Helvetica,Arial,sans-serif}
 .ct-list span{font-style:normal;margin-left:5px}
 #tagcloud a:before{content:'#'}
 #tag h3:before{content:'#'}
-
-#archive-list li:last-child{margin-bottom:0}
-#archive-list a{display:block;font:700 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;color:#333}
-#archive-list .dates{float:right;position:relative;top:1px;font:300 17px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;color:#bbb}
-#archive-list li a:hover,#archive-list li:hover .dates{color:#5694f1}
 
 @media screen and (max-width:540px){#wrapper{padding:20px 20px 20px 20px}
 nav.main-nav{text-align:center}
@@ -161,28 +160,13 @@ a.symbol:hover{color:#bcd4da}
 @media screen and (max-width:768px){.archive .post-time{margin:5px 0;width:auto;font-size:13px;display:block}
 }
 
-.code pre{overflow-x:auto;color:#d0d0d0;-webkit-text-size-adjust:none}
-.comment,.line .shebang{color:#777279}
-.attribute,.line .command,.line .keyword,.line .request,.line .status,.line .tag{color:#ebde68}
-.line .title,.method{color:#ffffb6}
-.argument,.line .attr_selector,.line .attribute,.line .cbracket,.line .cdata,.line .date,.line .tag .value{color:#c1ef65}
-.subst{color:#daefa3}
-.regexp{color:#e9c062}
-.line .built_in,.line .line .class,.line .line .constant,.line .line .decorator,.line .line .doctag,.line .line .identifier,.line .line .pi,.line .line .special,.line .line .title,.line .line .type{color:#c1ef65}
-.line .line .name,.line .literal,.line .number,.line .string,.line .symbol,.line .variable,.line .vbscript{color:#77bcd7}
-.tag{color:#96cbfe}
-.id,.line .property{color:#ffffb6}
-.class{color:#fff}
-.hexcolor{color:#c6c5fe}
-.number{color:#77bcd7}
-.cdata,.line .css,.line .formula,.line .javascript,.line .vbscript,.line .xml{opacity:.7}
-
-#post-body .highlight{background:#272b2d;margin:0;padding:20px;border-style:solid;border-color:#d0d0d0;border-width:1px 0;overflow:auto;color:#ccc;border-radius:3px}
+.code pre{overflow-x:auto;color:grey;-webkit-text-size-adjust:none}
+#post-body .highlight{margin:0;padding:16px;border-style:solid;border-color:#E4EBF2;overflow:auto;color:#ccc;border-radius:3px;border-width:1px;margin-bottom:20px}
 #post-body .gist .gist-file .gist-data .line-numbers,#post-body .highlight .gutter pre{color:#666}
-#post-body code,#post-body pre{font-size:.85em}
+#post-body pre{font-size:.85em}
 #post-body pre code{background:0 0;text-shadow:none;padding:0}
 #post-body .highlight code{background:#eee;text-shadow:0 1px #fff;padding:0 .3em}
-#post-body .highlight pre{border:none;margin:0;padding:0;white-space:pre;font-family:Menlo,Monaco,Courier;font-family:Menlo,Monaco,Courier;font-size:14px;padding:4px;font-weight:600;border-radius:0}
+#post-body .highlight pre{border:none;margin:0;padding:0;white-space:pre;font-family:Menlo,Monaco,C;font-family:Menlo,Monaco,Courier,monospace;font-size:11px;padding:4px;border-radius:0}
 #post-body .highlight table{margin:0;width:auto;border:0 none}
 #post-body .highlight tr{border:0 none}
 #post-body .highlight td{border:0 none;padding:0}
@@ -198,3 +182,13 @@ a.symbol:hover{color:#bcd4da}
 #post-body .gist .gist-file .gist-meta{background:#2d2d2d;color:#999;text-shadow:0 0;padding:0;margin-top:1em;margin-left:20px}
 #post-body .gist .gist-file .gist-meta a{color:#7cc576;font-weight:400}
 #post-body .gist .gist-file .gist-meta a:hover{text-decoration:underline}
+.comment,.quote{color:#8e908c}
+.deletion,.name,.regexp,.selector-class,.selector-id,.tag,.template-variable,.variable{color:#c82829}
+.built_in,.builtin-name,.link,.literal,.meta,.number,.params,.type{color:#f5871f}
+.attribute{color:#eab700}
+.addition,.bullet,.string,.symbol{color:#718c00}
+.section,.title{color:#4271ae}
+.keyword,.selector-tag{color:#8959a8}
+.hljs{display:block;overflow-x:auto;background:#fff;color:#4d4d4c;padding:.5em}
+.emphasis{font-style:italic}
+.strong{font-weight:700}
