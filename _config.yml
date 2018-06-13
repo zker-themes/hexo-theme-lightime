@@ -3,8 +3,8 @@ menu: #TITLE: link
   Archives: archives/
   Links: links/
 
-profile_link: about/
-avatar: /images/avatar.png #Please also prepare a HDer picture and add suffix@2x put in the same directory. and My English is not very good.
+profile_link: about/ #profile avatar-img link
+avatar: /images/avatar.png #Please also prepare a HDer picture and add suffix@2x put in the same directory.
 
 gitment:
  username: 
@@ -14,17 +14,19 @@ gitment:
 
 disqus_shortname: 
 
+google_analytics: UA-XXXXXXXX-Y
+
 twitter: 
 
-hitokoto: true
-instantclick: true
-service_worker: false
+hitokoto: false #Output a Chinese sentence to description
+instantclick: true #open INSTANTCLICK
+service_worker: false #open SERVICE WORKER
 
-js:
+js: #CDN
   instantclick: //cdnjs.loli.net/ajax/libs/instantclick/3.0.1/instantclick.min.js
   hitokoto: //v1.hitokoto.cn/?encode=js&select=%23hitokoto
   service_worker: /sw.js
   gitment: /js/gitment.browser.js
 
-css:
-  gitment: /css/default.css
+css: #CDN
+  gitment: 
