@@ -1,7 +1,6 @@
 menu: #TITLE: link
   About: about/
   Archives: archives/
-  Links: links/
 
 profile_link: about/ #profile avatar-img link
 avatar: /images/avatar.png #Please also prepare a HDer picture and add suffix@2x put in the same directory.

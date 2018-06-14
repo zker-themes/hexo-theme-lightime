@@ -1,14 +1,14 @@
 <nav id="post-nav">
     <span class="prev">
         <% if (page.prev){ %>
-            <a href="<%- config.root %><%- page.prev_link %>">
+            <a href="<%- url_for(page.prev_link) %>">
                 <span class="arrow">← </span><%= __('prev') %>
             </a>
         <% } %>
     </span>
     <span class="next">
         <% if (page.next){ %>
-            <a href="<%- config.root %><%- page.next_link %>">
+            <a href="<%- url_for(page.next_link) %>">
                 <%= __('next') %><span class="arrow"> →</span>
             </a>
         <% } %>

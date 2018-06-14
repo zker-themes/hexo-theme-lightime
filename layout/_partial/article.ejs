@@ -3,7 +3,7 @@
         <% if (item.title){ %>
             <h1><%= item.title %></h1>
         <% } %>
-        <h2 class="headline"><%= item.date.format(config.date_format) %>
+        <h2 class="headline"><%= item.date.format('MMM DD YYYY') %>
         <% if (item.categories && item.categories.length){ %>
             <%
             var cats = [];
@@ -55,7 +55,7 @@
         <ul id="post-list" class="archive readmore">
         <h3><%= __('readmore') %></h3>
         <% site.posts.sort('date', -1).limit(10).each(function(item){ %>
-            <li><a href="<%= config.root %><%= item.path %>"><%= item.title %><aside class="dates"><%= item.date.format(config.date_format) %></aside></a></li>
+            <%- partial('_partial/title', {item: item, index: true}) %>
         <% }); %>
         </ul>
     <% } %>

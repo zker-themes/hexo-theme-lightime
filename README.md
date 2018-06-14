@@ -2,8 +2,6 @@
 
 原hugo主题：https://github.com/digitalcraftsman/hugo-cactus-theme
 
-
-
 ## 安装 Install
 
 ```bash
@@ -28,7 +26,6 @@ git clone -b master https://github.com/caisiduo/hexo-theme-lightime themes/light
 menu: #TITLE: link
   About: about/
   Archives: archives/
-  Links: links/
 
 profile_link: about/ #profile avatar-img link
 avatar: /images/avatar.png #Please also prepare a HDer picture and add suffix@2x put in the same directory.
