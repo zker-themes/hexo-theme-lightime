@@ -4,7 +4,7 @@
 
 
 
-## 安装 Instant
+## 安装 Install
 
 ```bash
 git clone -b master https://github.com/caisiduo/hexo-theme-lightime themes/lightime
