@@ -36,7 +36,7 @@
 .gitment-comment-like-btn 
 	float right
 	&.liked 
-		color #5badf0
+		color color-light
 	svg 
 		vertical-align middle
 		height 20px
@@ -45,7 +45,7 @@
 		vertical-align middle
 		height 30px
 .gitment-comment-like-btn.liked svg,.gitment-header-like-btn.liked svg 
-	fill #5badf0
+	fill color-light
 a.gitment-header-issue-link,a.gitment-header-issue-link:visited 
 	float right
 	line-height 30px
@@ -89,11 +89,12 @@ a
 .gitment-editor-avatar 
 	.gitment-github-icon 
 		fill #fff
-		background-color #5badf0
+		background-color color-light
 .gitment-comment-main,.gitment-editor-main 
 	position relative
-	border 1px dashed #5badf0
+	border 1px dashed color-light
 	border-radius 3px
+	background-color rgba(255,255,255,.5)
 .gitment-comment-main::after,.gitment-comment-main::before,.gitment-editor-main::after,.gitment-editor-main::before 
 	position absolute
 	left -16px
@@ -117,7 +118,7 @@ a
 	text-shadow -20px 20px 20px 20px #000
 .gitment-comment-main::before,.gitment-editor-main::before 
 	border-width 8px
-	border-right-color #5badf0
+	border-right-color color-light
 .gitment-comment-main::after,.gitment-editor-main::after 
 	margin-top 1px
 	margin-left 2px
@@ -126,12 +127,11 @@ a
 .gitment-comment-header 
 	margin 12px 15px
 	color #666
-	background-color #fff
 	border-radius 3px
 .gitment-editor-header 
 	padding 0
 	margin 0
-	border-bottom 1px dashed #5badf0
+	border-bottom 1px dashed color-light
 a.gitment-comment-name,a.gitment-comment-name:visited 
 	font-weight 600
 .gitment-editor-tabs 
@@ -160,15 +160,16 @@ a.gitment-comment-name,a.gitment-comment-name:visited
 	font-size 13px
 	line-height 1.35
 	&.gitment-selected 
-		color #5badf0
-		border-color #5badf0
-		background-color #fff
+		color color-light
+		border-color color-light
+		background-color rgba(255,255,255,.5)
+		border-bottom 1px solid #fff
 .gitment-editor-login 
 	float right
 	margin-top -27px
 	margin-right 15px
 a.gitment-editor-login-link,a.gitment-editor-login-link:visited,a.gitment-footer-project-link,a.gitment-footer-project-link:visited 
-	color #2196f3
+	color color-light
 a.gitment-editor-logout-link,a.gitment-editor-logout-link:visited 
 	color #666
 .gitment-comment-body 
@@ -215,7 +216,7 @@ a.gitment-editor-logout-link,a.gitment-editor-logout-link:visited
 		margin 0
 		font-size 14px
 		line-height 1.6
-		background-color #fff
+		background-color rgba(255,255,255,.5)
 		color #333
 		vertical-align middle
 		border none
@@ -232,7 +233,7 @@ a.gitment-editor-logout-link,a.gitment-editor-logout-link:visited
 .gitment-editor-preview 
 	min-height 150px
 	padding 16px
-	background-color transparent
+	background-color rgba(255,255,255,.5)
 	width 100%
 	font-size 14px
 	line-height 1.5
@@ -261,7 +262,7 @@ a.gitment-editor-logout-link,a.gitment-editor-logout-link:visited
 		background-color #f5f5f5
 .gitment-comments-init-btn,.gitment-editor-submit 
 	color #fff
-	background-color #5badf0
+	background-color color-light
 	position relative
 	display inline-block
 	padding 7px 13px
@@ -285,7 +286,7 @@ a.gitment-editor-logout-link,a.gitment-editor-logout-link:visited
 	background-color #36a4ff
 .gitment-comments-init-btn:disabled,.gitment-editor-submit:disabled 
 	color rgba(255,255,255,.75)
-	background-color #5badf0
+	background-color color-light
 	box-shadow none
 .gitment-editor-submit 
 	float right

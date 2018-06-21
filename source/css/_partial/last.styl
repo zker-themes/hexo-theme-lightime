@@ -1,18 +1,16 @@
 .code 
 	pre 
 		overflow-x auto
-		color grey
+		color #24292e
 		-webkit-text-size-adjust none
 #post-body 
 	.highlight 
 		margin 0
 		padding 16px
-		border-style solid
-		border-color #E4EBF2
+		background #f6f8fa
 		overflow auto
 		color #ccc
 		border-radius 3px
-		border-width 1px
 		margin-bottom 20px
 		code 
 			background #eee
@@ -23,11 +21,11 @@
 			margin 0
 			padding 0
 			white-space pre
-			font-family Menlo,Monaco,C
-			font-family Menlo,Monaco,Courier,monospace
-			font-size 11px
+			font-family "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace
+			font-size 13px
 			padding 4px
 			border-radius 0
+			background transparent
 		table 
 			margin 0
 			width auto
@@ -37,6 +35,7 @@
 		td 
 			border 0 none
 			padding 0
+			background transparent
 			&.gutter 
 				padding 0
 		figcaption 
@@ -88,25 +87,48 @@
 					&:hover 
 						text-decoration underline
 #post-body .gist .gist-file .gist-data .line-numbers,#post-body .highlight .gutter pre 
-	color #666
-.comment,.quote 
+	color #7c90a5
+/*.comment,.quote 
 	color #8e908c
-.deletion,.name,.regexp,.selector-class,.selector-id,.tag,.template-variable,.variable 
-	color #c82829
+.deletion,.name,.regexp,.selector-attr,.selector-class,.selector-id,.tag,.template-variable,.variable 
+	color #2196f3
 .built_in,.builtin-name,.link,.literal,.meta,.number,.params,.type 
-	color #f5871f
+	color #d345ff
 .attribute 
-	color #eab700
+	color #0366d6
 .addition,.bullet,.string,.symbol 
-	color #718c00
+	color color-light
 .section,.title 
 	color #4271ae
 .keyword,.selector-tag 
-	color #8959a8
+	color #8959a8*/
+.comment,.meta 
+	color #6a737d
+.string,.variable,.template-variable,.strong,.emphasis,.quote 
+	color #df5000
+.keyword,.selector-tag,.type 
+	color #6f42c1
+.literal,.symbol,.bullet,.attribute,.number
+	color #005cc5
+.section,.name 
+	color #22863a
+.tag 
+	color #333333
+.title,.attr,.selector-id,.selector-class,.selector-attr,.selector-pseudo 
+	color #795da3
+.addition 
+	color #55a532
+	background-color #eaffea
+.deletion 
+	color #bd2c00
+	background-color #ffecec
 .emphasis 
 	font-style italic
 .strong 
 	font-weight 700
+
+.instantclick-bar 
+	background color-light !important
 
 @media screen and (max-width:540px)
 	#wrapper
@@ -135,9 +157,6 @@
 	#post-list-footer
 		margin-top: 20px
 		padding-top: 40px
-
-	#wrapper
-		padding: 20px 20px 20px 20px
 
 	.post
 		margin: 40px 0

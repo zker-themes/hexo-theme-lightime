@@ -11,6 +11,8 @@ gitment:
  id: 
  secret: 
 
+theme_color: 5badf0
+
 disqus_shortname: 
 
 google_analytics: UA-XXXXXXXX-Y

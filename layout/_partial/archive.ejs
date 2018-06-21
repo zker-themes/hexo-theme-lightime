@@ -9,6 +9,10 @@ if (page.archive){
 %>
 
 <%- partial('profile') %>
+<span class="archive-page-counter">
+    <% var posts_length = site.posts.length %>
+    <%-  _p("counter.archive_posts", site.posts.length) %>
+</span>
     <% site.posts.sort('date', 'desc').each(function(item){ %>
         <% var year = item.date.year(); %>
         <% if (last != year){ %>
@@ -29,7 +33,7 @@ if (page.archive){
 	<h3 class="archive-title"><%= __('tagcloud') %></h3>
 	<ul class="ct-list">
 		<% site.tags.map(function(tag){  %>
-    		<a href="<%- config.root %>tags/<%= tag.name %>/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %><span>(<%= tag.length %>)</span></a>
+    		<a href="<%- config.root %>tags/<%= tag.name %>/#<%= tag.name %>" title="<%= tag.name %>"><%= tag.name %><span><%= tag.length %></span></a>
     	<% }) %>
     </ul>
 </div>
@@ -37,7 +41,7 @@ if (page.archive){
 	<h3 class="archive-title"><%= __('category') %></h3>
 	<ul class="ct-list">
 		<% site.categories.map(function(category){  %>
-    		<a href="<%- config.root %>categories/<%= category.name %>/#<%= category.name %>" title="<%= category.name %>"><%= category.name %><span>(<%= category.length %>)</span></a>
+    		<a href="<%- config.root %>categories/<%= category.name %>/#<%= category.name %>" title="<%= category.name %>"><%= category.name %><span><%= category.length %></span></a>
     	<% }) %>
     	</div>
     </ul>
